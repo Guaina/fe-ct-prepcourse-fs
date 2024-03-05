@@ -6,6 +6,20 @@ function combine(str1, str2, str3) {
    // combine("abc", "", "123") == "a1b2c3"
    // combine("abc", "12345", "") == "a1b2c345"
    // combine("abc", "12345", "67") == "a16b27c345"
+   let strCombinado = '';
+   let longitudMaxima = Math.max(str1.length, str2.length, str3.length);
+   for(i = 0; i < longitudMaxima; i++){
+      if(i < str1.length){
+         strCombinado += str1[i]
+      } 
+      if(i < str2.length){
+         strCombinado += str2[i]
+      } 
+      if(i < str3.length){
+         strCombinado += str3[i]
+      } 
+   }
+   return strCombinado;
 }
 
 module.exports = combine;
